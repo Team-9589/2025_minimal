@@ -4,14 +4,17 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import frc.robot.commands.autos;
+import frc.robot.subsystems.drive_subsystem;
 
 public class robot extends TimedRobot {
 
   private Command autonomousCommand;
   public robot_container container; 
+  public drive_subsystem drive_subsystem;
 
   public robot() {
     
+    drive_subsystem = new drive_subsystem();
     container =  new robot_container();
   
   }
@@ -19,8 +22,10 @@ public class robot extends TimedRobot {
   @Override
   public void robotInit() {
 
+    drive_subsystem.live_and_learn();
     autos.Shuffleboard();
     autos.get_auto_chooser();
+
 
   }
 
