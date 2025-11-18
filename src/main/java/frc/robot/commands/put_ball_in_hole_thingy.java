@@ -20,10 +20,8 @@ public class put_ball_in_hole_thingy extends Command {
     @Override
     public void execute() {
 
-        System.out.println("COMMAND HAS BEEN ACTIVATED");
         elevator.move_to_box_thingy();
         big_ball_thingy.move_arm_to_hole_thing();
-        // big_ball_thingy.score_in_hole_thing();
 
     }
 

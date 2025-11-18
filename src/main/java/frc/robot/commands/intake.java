@@ -15,7 +15,7 @@ public class intake extends Command {
     @Override
     public void execute() {
 
-        System.out.println("COMMAND HAS BEEN ACTIVATED");        
+                
         bigBallThingy.intake();
         
     }

@@ -41,32 +41,6 @@ public class elevator_subsystem extends SubsystemBase {
 
   }
 
-  public void elevator_test(){
-    
-    XboxController operator_controller = new XboxController(2);
-    boolean button1 = operator_controller.getRawButton(6);
-    boolean button2 = operator_controller.getRawButton(5);
-
-    elevator_motor.set(0);
-
-    if(button1){
-
-      elevator_motor.set(0.11);
-      System.out.println("button1 pressed -- speed = " + elevator_motor.get());
-
-    } else if (button2){
-
-      elevator_motor.set(-0.11);
-      System.out.println("button2 pressed -- speed = " + elevator_motor.get());
-
-    } else {
-
-      elevator_motor.set(0);
-
-    }
-
-  }
-
   public void stop(){
 
     elevator_motor.disable();
@@ -122,6 +96,5 @@ public class elevator_subsystem extends SubsystemBase {
 
   @Override
   public void periodic() {
-    // This method will be called once per scheduler run
   }
 }

@@ -19,8 +19,7 @@ public class reset extends Command {
 
     @Override
     public void execute() {
-
-        System.out.println("COMMAND HAS BEEN ACTIVATED");
+        
         elevator.reset();
         big_ball_thingy.reset();
 

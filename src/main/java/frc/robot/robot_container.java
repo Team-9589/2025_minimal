@@ -13,7 +13,7 @@ public class robot_container {
   private final big_ball_thingy_subsystem ball_thing_subsystem;
 
   private final CommandXboxController driver_controller = new CommandXboxController(0);
-  // private final CommandXboxController operator_controller = new CommandXboxController(1);
+  private final CommandXboxController operator_controller = new CommandXboxController(1);
 
   public robot_container() {
 
@@ -30,7 +30,7 @@ public class robot_container {
 
     System.out.println("CONFIGURING BINDINGS");
 
-    // Trigger left_bumper = new Trigger(operator_controller.leftBumper());
+    Trigger left_bumper = new Trigger(operator_controller.leftBumper());
     Trigger left_trigger = new Trigger(driver_controller.leftTrigger());
     Trigger right_trigger = new Trigger(driver_controller.rightTrigger());
     Trigger a = new Trigger(driver_controller.a());
@@ -47,7 +47,7 @@ public class robot_container {
     pov_up.onTrue(new arm_reset(ball_thing_subsystem));
     x.whileTrue(new intake(ball_thing_subsystem).andThen(new stop_all(drive, elevator, ball_thing_subsystem)));
     y.whileTrue(new shoot(ball_thing_subsystem));
-    // left_bumper.onTrue(new stop_all(drive, elevator, ball_thing_subsystem));
+    left_bumper.onTrue(new stop_all(drive, elevator, ball_thing_subsystem));
     left_trigger.onTrue(new put_ball_in_hole_thingy(elevator, ball_thing_subsystem).withTimeout(1).andThen(new stop_all(drive, elevator, ball_thing_subsystem)));
     right_trigger.onTrue(new lebron(elevator, ball_thing_subsystem).withTimeout(1).andThen(new stop_all(drive, elevator, ball_thing_subsystem)));
     a.onTrue(new get_ball_from_low_level(elevator, ball_thing_subsystem).withTimeout(1).andThen(new stop_all(drive, elevator, ball_thing_subsystem)));

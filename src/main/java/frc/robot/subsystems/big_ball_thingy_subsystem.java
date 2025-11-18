@@ -56,29 +56,6 @@ public class big_ball_thingy_subsystem extends SubsystemBase {
 
   } 
 
-  public void arm_test(){
-
-    XboxController test_controller = new XboxController(2);
-    boolean button3 = test_controller.getRawButton(1);
-    boolean button4 = test_controller.getRawButton(2);
-
-    if(button3){
-
-      arm_motor.set(0.11);
-      System.out.println("button3 pressed -- speed = " + arm_motor.get());
-
-    } else if (button4){
-
-      arm_motor.set(-0.11);
-      System.out.println("button4 pressed -- speed = " + arm_motor.get());
-
-    } else {
-
-      arm_motor.set(0);
-
-    }
-
-  }
 
   public void intake(){
 
@@ -152,6 +129,5 @@ public class big_ball_thingy_subsystem extends SubsystemBase {
 
   @Override
   public void periodic() {
-    // This method will be called once per scheduler run
   }
 }
