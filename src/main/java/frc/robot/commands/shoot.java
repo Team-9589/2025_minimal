@@ -14,8 +14,7 @@ public class shoot extends Command {
 
     @Override
     public void execute() {
-
-        System.out.println("COMMAND HAS BEEN ACTIVATED");        
+      
         bigBallThingy.shoot();
         
     }

@@ -72,9 +72,6 @@ public class robot extends TimedRobot {
   
   @Override
   public void teleopPeriodic() {
-    
-    // CommandScheduler.getInstance().cancelAll();
-    
   }
 
   @Override

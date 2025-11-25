@@ -5,9 +5,7 @@ import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj2.command.SequentialCommandGroup;
 import frc.robot.constants.auto_constants;
-import frc.robot.subsystems.big_ball_thingy_subsystem;
-import frc.robot.subsystems.drive_subsystem;
-import frc.robot.subsystems.elevator_subsystem;
+import frc.robot.subsystems.*;
 
 public final class autos {
 
@@ -48,7 +46,7 @@ public final class autos {
         ShuffleboardTab mainTab = Shuffleboard.getTab("Main");
   
         mainTab.add("AutoMode", get_auto_chooser()).withSize(5, 3).withPosition(0, 0);
-        mainTab.addCamera("Skooble POV", "USB Camera 0", "null").withSize(6, 6).withPosition(6, 0);
+       // mainTab.addCamera("Skooble POV", "USB Camera 0", "null").withSize(6, 6).withPosition(6, 0);
 	
     }
 

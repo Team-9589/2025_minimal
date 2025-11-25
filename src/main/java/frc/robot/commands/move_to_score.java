@@ -20,7 +20,7 @@ public class move_to_score extends Command {
     @Override
     public void execute() {
 
-        System.out.println("COMMAND HAS BEEN ACTIVATED");
+    
         elevator.move_to_score();
         big_ball_thingy.move_arm_to_score();
 

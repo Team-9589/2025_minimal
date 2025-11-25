@@ -23,7 +23,7 @@ public class stop_all extends Command {
     @Override
     public void execute() {
 
-        System.out.println("COMMAND HAS BEEN ACTIVATED -- STOP ALL");
+        System.out.println("STOP ALL");
         elevator.stop();
         big_ball_thingy.stop();
         drive.stop();

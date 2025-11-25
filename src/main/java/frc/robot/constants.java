@@ -6,10 +6,6 @@ public final class constants {
     
     public static final int elevator_motor = 17;
 
-    public static final float p = 0f;
-    public static final float i = 0f;
-    public static final float d = 0f;
-
     public static final double low_intake = 41;
     public static final double high_intake = 60.88;
     public static final double ground_intake = 11.5;

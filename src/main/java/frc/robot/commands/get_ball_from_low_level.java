@@ -16,12 +16,9 @@ public class get_ball_from_low_level extends Command {
 
     @Override
     public void execute() {
-
-        System.out.println("COMMAND HAS BEEN ACTIVATED");        
-        elevator_subsystem.move_to_low_intake();
-        bigBallThingy.move_arm_to_low_intake();
-        // bigBallThingy.intake();
         
+        elevator_subsystem.move_to_low_intake();
+        bigBallThingy.move_arm_to_low_intake();        
     }
 
     @Override

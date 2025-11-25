@@ -20,10 +20,9 @@ public class lebron extends Command {
     @Override
     public void execute() {
 
-        System.out.println("COMMAND HAS BEEN ACTIVATED");
         elevator.move_to_net_thingy();
         big_ball_thingy.move_arm_to_net_thing();
-        // big_ball_thingy.score_in_net_thing();
+    
 
     }
 
